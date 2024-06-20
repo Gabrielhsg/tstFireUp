@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Jovens da Igreja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fire Up, Let's Burn!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Bem-vindo ao Fire Up</h2>
+            <p>Fire up é um movimento de jovens da Igreja Presbiteriana Renovada onde se iniciou em Bal.Piçarras e tem o foco de transformar jovens do mundo inteiro, Let's burn the world!</p>
+            <a href="eventos.html" class="btn">Veja Nossos Eventos</a>
+        </div>
+    </section>
+
+    <section id="ofertas">
+        <div class="container">
+            <h2>Ofertas</h2>
+            <p>Faça sua contribuição via Pix copiando o código abaixo:</p>
+            <input type="text" id="codigoPix" value="00020126580014BR.GOV.BCB.PIX011442424242000201000302BR540310.005802BR5920Jovens da Igreja6009Sao Paulo62070503***6304A13B" readonly>
+            <button type="button" class="btn" onclick="copiarPix()">Copiar Código Pix</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fire Up. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copiarPix() {
+            var codigoPix = document.getElementById("codigoPix");
+            codigoPix.select();
+            codigoPix.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand("copy");
+            alert("Código Pix copiado: " + codigoPix.value);
+        }
+    </script>
+</body>
+</html>

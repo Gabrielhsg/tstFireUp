@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Jovens da Igreja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fire Up, Let's Burn!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato Conosco</h2>
+            <button type="button" class="btn" onclick="abrirWhatsApp()">Enviar Mensagem pelo WhatsApp</button>
+            <button type="button" class="btn" onclick="entrarGrupo()">Entrar no Grupo do Fire Up</button>
+            <button type="button" class="btn" onclick="abrirInstagram()">Siga-nos no Instagram</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fire Up. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function abrirWhatsApp() {
+            var telefone = '+5547991786370'; // Número de telefone no formato internacional
+            var mensagem = encodeURIComponent('Olá, Vim do site do Fire Up!'); // Mensagem inicial (opcional)
+            window.open('https://wa.me/' + telefone + '?text=' + mensagem, '_blank');
+        }
+
+        function entrarGrupo() {
+            var grupoLink = 'https://chat.whatsapp.com/H5MkLPWC5S5Cdugkjjo8a8'; // Link do grupo do WhatsApp
+            window.open(grupoLink, '_blank');
+        }
+
+        function abrirInstagram() {
+            var instagramLink = 'https://www.instagram.com/iprfireup/'; // Link do perfil do Instagram
+            window.open(instagramLink, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+
